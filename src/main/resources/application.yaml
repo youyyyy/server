@@ -1,0 +1,15 @@
+server:
+  address: 0.0.0.0
+  port: 8070
+
+spring:
+  datasource:
+      name: mydb
+      driver-class-name:  com.mysql.cj.jdbc.Driver
+      url:  jdbc:mysql://localhost:3308/mydb?serverTimezone=UTC&characterEncoding=utf8
+      username: root
+      password: root
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
