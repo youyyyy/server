@@ -40,8 +40,7 @@ public class DiscussServiceImpl implements IDiscussService {
     @Override
     public AResponse adddis(Discuss discuss) {
         ResponseUtil responseUtil=new ResponseUtil();
-
-       discussDao.adddis(discuss);
+        discussDao.adddis(discuss);
 
         return responseUtil.setaresponse(200,discuss);
 
