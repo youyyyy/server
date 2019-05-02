@@ -78,7 +78,7 @@ public class UserController<session> {
 //    }
 
     //用户注册
-    @RequestMapping(value = "/regist")
+    @RequestMapping(value = "/regist",method = RequestMethod.POST)
     public AResponse regist(@RequestBody User user){
 
         return userService.regist(user);
