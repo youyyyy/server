@@ -50,4 +50,12 @@ public interface UserDao {
     //修改信息
     @Select("update user set username=#{username},password=#{password},gender=#{gender},phonenum=#{phonenum},email=#{email},csignature=#{csignature},type=#{type} where id=#{id}")
     User modifyUser(User user);
+
+    @Select("update user set username=#{username} where id=#{id}")
+    User modifyName(String username,int id);
+
+    @Select("update user set csignature=#{csignature} where id=#{id}")
+    User modifyCsignature(String csignature,int id);
+
+
 }

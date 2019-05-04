@@ -110,6 +110,11 @@ public class UserController<session> {
         return userService.modifyUser(id,user);
     }
 
+    @RequestMapping("modifyname")
+    public AResponse modifyname(int id,String username,User user){
+        return userService.modifyName(id,username,user);
+    }
+
     @RequestMapping("/selectbyid")
     public AResponse selectById(int id){
         return userService.selectById(id);

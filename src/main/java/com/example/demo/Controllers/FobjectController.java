@@ -68,7 +68,7 @@ public class FobjectController {
     @ResponseBody
     public byte[] getImage(int id) throws IOException {
         String s=fobjectService.getImage(id).getObjectpic();
-        File file = new File("C:/Users/blank/Desktop/资源/"+s);
+        File file = new File(s);
         FileInputStream inputStream = new FileInputStream(file);
         byte[] bytes = new byte[inputStream.available()];
         inputStream.read(bytes, 0, inputStream.available());

@@ -44,5 +44,9 @@ public interface IUserService {
 
     AResponse selectById(int id);
 
+    AResponse modifyName(int id,String username,User user);
+
+    AResponse modifyCsignature(String csignature,int id,User user);
+
 
 }

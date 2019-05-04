@@ -126,6 +126,26 @@ public class UserServiceImpl implements IUserService {
             return responseUtil.setaresponse(200,user);
     }
 
+    @Override
+    public AResponse modifyName(int id,String username,User user) {
+        ResponseUtil responseUtil=new ResponseUtil();
+        if(user.getId()==id) {
+            userDao.modifyName(username,id);
+            User users=userDao.selectUser(user.getId());
+            if (users==null)
+                return responseUtil.setaresponse(404,users);
+            else
+                return responseUtil.setaresponse(200,users);
+        }
+        else
+            return responseUtil.setaresponse(400,user);
+    }
+
+    @Override
+    public AResponse modifyCsignature(String csignature, int id, User user) {
+        return null;
+    }
+
 
 /* @Autowired
     private UserDao userDao;*/
