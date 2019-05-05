@@ -42,7 +42,7 @@ public class UserController<session> {
         User user = userService.login(phonenum,password);
         String userId = String.valueOf(user.getId());
         if(user==null)
-            return responseUtil.setaresponse(404,user);
+            return responseUtil.setaresponse(404,"null");
         else {
             if(user.getPassword().equals(password)) {
                 //read cookie
@@ -57,7 +57,7 @@ public class UserController<session> {
                 return responseUtil.setaresponse(200,user);
             }
             else
-                return responseUtil.setaresponse(404,user);
+                return responseUtil.setaresponse(404,"null");
         }
 
     }
@@ -80,7 +80,6 @@ public class UserController<session> {
     //用户注册
     @RequestMapping(value = "/regist",method = RequestMethod.POST)
     public AResponse regist(@RequestBody User user){
-
         return userService.regist(user);
     }
 
