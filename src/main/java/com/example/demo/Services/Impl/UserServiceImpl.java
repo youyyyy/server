@@ -94,6 +94,7 @@ public class UserServiceImpl implements IUserService {
         else
         return responseUtil.setresponse(200,users);
     }
+    
 
     @Override
     public AResponse showUser(int id) {
