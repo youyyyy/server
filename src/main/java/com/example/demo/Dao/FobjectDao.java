@@ -40,4 +40,7 @@ public interface FobjectDao {
     @Select("select objectpic from fobject where id=#{id}")
     Fobject getImage(int id);
 
+    @Select("select * from fobject where id=#{id}")
+    Fobject byId(int id);
+
 }

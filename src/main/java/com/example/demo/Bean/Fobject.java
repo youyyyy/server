@@ -21,6 +21,8 @@ public class Fobject {
 
     private String actor;
 
+    private String focus;
+
 
 
 
@@ -92,6 +94,13 @@ public class Fobject {
     }
     public void setActor(String actor){
         this.actor=actor;
+    }
+
+    public String getFocus(){
+        return focus;
+    }
+    public void setFocus(String focus){
+        this.focus=focus;
     }
 
 

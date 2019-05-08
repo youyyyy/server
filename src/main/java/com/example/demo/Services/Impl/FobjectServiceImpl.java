@@ -118,5 +118,15 @@ public class FobjectServiceImpl implements IFobjectService {
        return fobject;
     }
 
+    @Override
+    public AResponse byId(int id) {
+        ResponseUtil responseUtil=new ResponseUtil();
+        Fobject fobject=fobjectDao.byId(id);
+        if (fobject==null)
+            return responseUtil.setaresponse(404,fobject);
+        else
+            return responseUtil.setaresponse(200,fobject);
+    }
+
 
 }

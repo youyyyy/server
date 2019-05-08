@@ -27,4 +27,6 @@ public interface IFobjectService {
 
     Fobject getImage(int id);
 
+    AResponse byId(int id);
+
 }

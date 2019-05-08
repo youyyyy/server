@@ -81,4 +81,9 @@ public class FobjectController {
         return s;
     }
 
+    @RequestMapping("byid")
+    public AResponse byId(int id){
+        return fobjectService.byId(id);
+    }
+
 }
