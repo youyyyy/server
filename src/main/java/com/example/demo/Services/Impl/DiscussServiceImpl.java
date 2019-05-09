@@ -41,7 +41,6 @@ public class DiscussServiceImpl implements IDiscussService {
     public AResponse adddis(Discuss discuss) {
         ResponseUtil responseUtil=new ResponseUtil();
         discussDao.adddis(discuss);
-
         return responseUtil.setaresponse(200,discuss);
 
     }

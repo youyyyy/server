@@ -19,6 +19,8 @@ public class Discuss {
 
     private int puid;
 
+    private String username;
+
     private User user;
 
 
@@ -69,6 +71,13 @@ public class Discuss {
     }
     public void setPuid(int puid){
         this.puid=puid;
+    }
+
+    public String getUsername(){
+        return username;
+    }
+    public void setUsername(String username){
+        this.username=username;
     }
 
 

@@ -6,10 +6,7 @@ import com.example.demo.Bean.Discuss;
 import com.example.demo.Bean.Response;
 import com.example.demo.Services.IDiscussService;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -30,7 +27,7 @@ public class DiscussController {
         return discussService.fobjectdis(fobjectid);
     }
 
-    @RequestMapping("/add")
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
     public AResponse adddis(@RequestBody Discuss discuss){
         return discussService.adddis(discuss);
     }

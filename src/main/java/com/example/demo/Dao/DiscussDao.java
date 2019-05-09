@@ -17,7 +17,7 @@ public interface DiscussDao {
     List<Discuss> fobjectdis(int fobjectid);
 
     //写评论or回复
-    @Select("insert into discuss(body,userid,fobjectid,time,pid,puid) value(#{discuss.body},#{discuss.userid},#{discuss.fobjectid},#{discuss.time},#{discuss.pid},#{discuss.puid})")
+    @Select("insert into discuss(body,userid,fobjectid,time,pid,puid,username) value(#{discuss.body},#{discuss.userid},#{discuss.fobjectid},#{discuss.time},#{discuss.pid},#{discuss.puid},#{discuss.username})")
     Discuss adddis(@Param("discuss")Discuss discuss);
 
     //根据自己的ID删除自己的评论
