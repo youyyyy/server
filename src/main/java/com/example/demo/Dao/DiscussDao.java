@@ -16,6 +16,9 @@ public interface DiscussDao {
     @Select("select * from discuss where fobjectid=#{fobjectid}")
     List<Discuss> fobjectdis(int fobjectid);
 
+//    @Select("select username from user where discuss.userid")
+//    List<Discuss> selectDis(int id);
+
     //写评论or回复
     @Select("insert into discuss(body,userid,fobjectid,time,pid,puid,username) value(#{discuss.body},#{discuss.userid},#{discuss.fobjectid},#{discuss.time},#{discuss.pid},#{discuss.puid},#{discuss.username})")
     Discuss adddis(@Param("discuss")Discuss discuss);

@@ -1,5 +1,6 @@
 package com.example.demo.Dao;
 
+import com.example.demo.Bean.Discuss;
 import com.example.demo.Bean.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -56,6 +57,15 @@ public interface UserDao {
 
     @Select("update user set csignature=#{csignature} where id=#{id}")
     User modifyCsignature(String csignature,int id);
+
+    @Select("update user set gender=#{gender} where id=#{id}")
+    User modifyGender(int gender,int id);
+
+    @Select("update user set password=#{password} where id=#{id}")
+    User modifyPassword(String password,int id);
+
+    @Select("update user set type=#{type} where id=#{id}")
+    User modifyType(String type,int id);
 
 
 }

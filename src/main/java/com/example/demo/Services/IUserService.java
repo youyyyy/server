@@ -48,6 +48,9 @@ public interface IUserService {
 
     AResponse modifyCsignature(String csignature,int id,User user);
 
+    AResponse modifyGender(int gender,int id,User user);
 
+    AResponse modifyPassword(String password,int id,User user);
 
+    AResponse modifyType(String type,int id,User user);
 }

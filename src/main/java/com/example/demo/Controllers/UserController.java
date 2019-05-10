@@ -110,13 +110,33 @@ public class UserController<session> {
     }
 
     @RequestMapping("modifyname")
-    public AResponse modifyname(int id,String username,User user){
+    public AResponse modifyName(int id,String username,User user){
         return userService.modifyName(id,username,user);
     }
 
     @RequestMapping("/selectbyid")
     public AResponse selectById(int id){
         return userService.selectById(id);
+    }
+
+    @RequestMapping("modifycsignature")
+    public AResponse modifyCsignature(String csignature,int id,User user){
+        return userService.modifyCsignature(csignature,id,user);
+    }
+
+    @RequestMapping("modifygender")
+    public AResponse modifyGender(int gender,int id,User user){
+        return userService.modifyGender(gender,id,user);
+    }
+
+    @RequestMapping("modifypassword")
+    public AResponse modifyPassword(String password,int id,User user){
+        return userService.modifyPassword(password,id,user);
+    }
+
+    @RequestMapping("modifytype")
+    public AResponse modifyType(String type,int id,User user){
+        return userService.modifyType(type,id,user);
     }
 
 

@@ -144,7 +144,62 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public AResponse modifyCsignature(String csignature, int id, User user) {
-        return null;
+        ResponseUtil responseUtil=new ResponseUtil();
+        if(user.getId()==id) {
+            userDao.modifyCsignature(csignature,id);
+            User users=userDao.selectUser(user.getId());
+            if (users==null)
+                return responseUtil.setaresponse(404,users);
+            else
+                return responseUtil.setaresponse(200,users);
+        }
+        else
+            return responseUtil.setaresponse(400,user);
+    }
+
+    @Override
+    public AResponse modifyGender(int gender, int id, User user) {
+        ResponseUtil responseUtil=new ResponseUtil();
+        if(user.getId()==id) {
+            userDao.modifyGender(gender,id);
+            User users=userDao.selectUser(user.getId());
+            if (users==null)
+                return responseUtil.setaresponse(404,users);
+            else
+                return responseUtil.setaresponse(200,users);
+        }
+        else
+            return responseUtil.setaresponse(400,user);
+    }
+
+    @Override
+    public AResponse modifyPassword(String password, int id, User user) {
+        ResponseUtil responseUtil=new ResponseUtil();
+        if(user.getId()==id) {
+            userDao.modifyPassword(password,id);
+            User users=userDao.selectUser(user.getId());
+            if (users==null)
+                return responseUtil.setaresponse(404,users);
+            else
+                return responseUtil.setaresponse(200,users);
+        }
+        else
+            return responseUtil.setaresponse(400,user);
+    }
+
+    @Override
+    public AResponse modifyType(String type, int id, User user) {
+        ResponseUtil responseUtil=new ResponseUtil();
+        if(user.getId()==id) {
+            userDao.modifyType(type,id);
+            User users=userDao.selectUser(user.getId());
+            if (users==null)
+                return responseUtil.setaresponse(404,users);
+            else
+                return responseUtil.setaresponse(200,users);
+        }
+        else
+            return responseUtil.setaresponse(400,user);
     }
 
 
