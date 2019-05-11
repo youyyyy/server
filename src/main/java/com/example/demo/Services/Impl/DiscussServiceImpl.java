@@ -3,6 +3,7 @@ package com.example.demo.Services.Impl;
 import com.example.demo.Bean.AResponse;
 import com.example.demo.Bean.Discuss;
 import com.example.demo.Bean.Response;
+import com.example.demo.Bean.User;
 import com.example.demo.Dao.DiscussDao;
 import com.example.demo.Services.IDiscussService;
 import com.example.demo.Utils.ResponseUtil;
@@ -54,4 +55,13 @@ public class DiscussServiceImpl implements IDiscussService {
         else
             return responseUtil.setaresponse(200,discusses);
     }
+
+    @Override
+    public Response modifyusername(int userid, String username) {
+        ResponseUtil responseUtil=new ResponseUtil();
+        List<Discuss> discussList=discussDao.modifyName(username,userid);
+        return responseUtil.setresponse(200,discussList);
+    }
+
+
 }

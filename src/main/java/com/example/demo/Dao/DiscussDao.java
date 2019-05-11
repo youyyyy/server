@@ -27,5 +27,8 @@ public interface DiscussDao {
     @Select("delete from discuss where id=#{id}")
     Discuss deletedis(@Param("id")int id);
 
+    @Select("update discuss set username=#{username} where userid=#{userid}")
+    List<Discuss> modifyName(String username,int userid);
+
 
 }
