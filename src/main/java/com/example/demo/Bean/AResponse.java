@@ -5,8 +5,6 @@ import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class AResponse {
     private int code;
 
