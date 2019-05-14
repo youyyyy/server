@@ -2,12 +2,18 @@ server:
   address: 0.0.0.0
   port: 8070
 
+#数据库配置
 spring:
   datasource:
+#     数据表名称
       name: mydb
+#     数据库驱动
       driver-class-name:  com.mysql.cj.jdbc.Driver
+#     数据库地址、端口、编码
       url:  jdbc:mysql://localhost:3308/mydb?serverTimezone=UTC&characterEncoding=utf8
+#     数据库名称
       username: root
+#     数据库密码
       password: root
 
 mybatis:

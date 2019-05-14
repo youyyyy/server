@@ -8,7 +8,7 @@ import java.util.List;
 
 
 public interface DiscussDao {
-    //用户通过自己的id查询自己的所有评论及回复
+    //用户通过自己的id查询自己的所有评论
     @Select("select * from discuss where userid=#{userid}")
     List<Discuss> selfdis(int userid);
 
