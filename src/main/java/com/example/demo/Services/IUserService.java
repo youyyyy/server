@@ -32,6 +32,8 @@ public interface IUserService {
 
     User login(String phonenum, String password);
 
+//    User login2(String phonenum, String password);
+
     AResponse selectByEmail(String email);
 
     AResponse modifyUser(int id,User user);

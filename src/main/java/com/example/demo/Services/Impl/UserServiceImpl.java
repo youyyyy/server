@@ -56,6 +56,11 @@ public class UserServiceImpl implements IUserService {
             return user;
     }
 
+//    @Override
+//    public User login2(String phonenum, String password) {
+//        User user = userDao.selectpass(password);
+//        return user;
+//    }
 
 
     @Override

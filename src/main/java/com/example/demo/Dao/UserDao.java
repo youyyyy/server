@@ -38,6 +38,8 @@ public interface UserDao {
     @Select("select * from user where phonenum=#{phonenum}")
     User selectphone2(@Param("phonenum")String phonenum);
 
+//    @Select("select * from user password=#{password}")
+//    User selectpass(@Param("password")String password);
 
     @Select("delete from user where id=#{id}")
     User removeUser(@Param("id") int id);//修改e
