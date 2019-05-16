@@ -44,7 +44,10 @@ public class UserController<session> {
         if(user==null)
             return responseUtil.setaresponse(404,"null");
         else {
-            if(user.getPassword().equals(password)) {
+            if (user.getPassword()==null){
+                return responseUtil.setaresponse(404,"null");
+            }
+            else if(user.getPassword().equals(password)) {
                 //read cookie
 
 //                String readCookieValue = CookieUtil.getCookie(request, "login");

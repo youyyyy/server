@@ -20,6 +20,7 @@ public class UserServiceImpl implements IUserService {
 
 
 
+
     private boolean userInfoAuth(User user){
         if(user.getUsername()==""||user.getPassword()==""||user.getEmail()==""||user.getGender()==0||user.getPhonenum()==""||user.getLevels()==""){
             return false;
@@ -53,7 +54,12 @@ public class UserServiceImpl implements IUserService {
     @Override
     public User login(String phonenum, String password) {
         User user = userDao.selectphone2(phonenum);
+        if(user!=null)
             return user;
+        else {
+            User user2=new User();
+            return user2;
+        }
     }
 
 //    @Override
