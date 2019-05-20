@@ -4,7 +4,7 @@ import com.example.demo.Bean.AResponse;
 import com.example.demo.Bean.Response;
 
 public interface IMusicService {
-    Response selectByFobjectid(int fobjectid);
+    AResponse selectByFobjectid(int fobjectid);
 
     Response allMusic();
 

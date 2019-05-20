@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface MusicDao {
     //根据番剧id搜索
-    @Select("select musicname,signer,type,fobjectname from music where fobjectid=#{fobjectid}")
-    List<Music> selectByFobjectid(int fobjectid);
+    @Select("select * from music where fobjectid=#{fobjectid}")
+    Music selectByFobjectid(int fobjectid);
 
     //搜索所有
     @Select("select musicname,signer,type,fobjectname from music")

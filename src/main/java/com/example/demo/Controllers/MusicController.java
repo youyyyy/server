@@ -20,7 +20,7 @@ public class MusicController {
     }
 
     @RequestMapping("/fmusic")
-    public Response fmusic(int fobjectid){
+    public AResponse fmusic(int fobjectid){
         return musicService.selectByFobjectid(fobjectid);
     }
 

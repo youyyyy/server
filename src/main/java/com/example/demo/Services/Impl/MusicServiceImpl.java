@@ -17,13 +17,13 @@ public class MusicServiceImpl implements IMusicService {
     @Autowired
     private MusicDao musicDao;
     @Override
-    public Response selectByFobjectid(int fobjectid) {
+    public AResponse selectByFobjectid(int fobjectid) {
         ResponseUtil responseUtil=new ResponseUtil();
-        List<Music> music=musicDao.selectByFobjectid(fobjectid);
+        Music music=musicDao.selectByFobjectid(fobjectid);
         if (music==null)
-            return responseUtil.setresponse(404,music);
+            return responseUtil.setaresponse(404,music);
         else
-            return responseUtil.setresponse(200,music);
+            return responseUtil.setaresponse(200,music);
     }
 
     @Override
