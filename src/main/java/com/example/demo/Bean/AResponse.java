@@ -5,6 +5,10 @@ import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+* 统一返回格式，对于单个
+* 返回状态码code，报错信息，客户端请求消息以及请求时间
+* */
 public class AResponse {
     private int code;
 

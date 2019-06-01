@@ -12,15 +12,19 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
+/*
+* 用户业务逻辑层的实现，完成业务的实现，返回相应的信息
+* */
+@Service//保证被扫描
 public class UserServiceImpl implements IUserService {
 
-    @Autowired
+    @Autowired//自动注入，操作模型，by Name
     private UserDao userDao;
 
 
 
-
+//判断输入方法
     private boolean userInfoAuth(User user){
         if(user.getUsername()==""||user.getPassword()==""||user.getEmail()==""||user.getGender()==0||user.getPhonenum()==""||user.getLevels()==""){
             return false;
@@ -31,7 +35,7 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public AResponse regist(User user) {
-        ResponseUtil responseUtil=new ResponseUtil();
+        ResponseUtil responseUtil=new ResponseUtil();//实例化返回回工具类
         if (!userInfoAuth(user)){
             return responseUtil.setaresponse(400,null);
         }

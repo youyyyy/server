@@ -5,6 +5,9 @@ import com.example.demo.Bean.Response;
 import com.example.demo.Bean.User;
 import org.apache.ibatis.annotations.Mapper;
 
+/*
+* 用户逻辑层接口，定义各种操作的返回类型以及形参
+* */
 @Mapper
 public interface IUserService {
 //    @Select("select * from user where user_id=#{user_id}")

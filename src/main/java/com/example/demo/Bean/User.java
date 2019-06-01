@@ -5,12 +5,15 @@ import org.apache.ibatis.annotations.Mapper;
 import java.io.Serializable;
 
 
+/*
+* 用户模型，包括用户各种属性以及get、set
+* */
 public class User implements Serializable {
 
 
     private int id;
 
-    //用户昵称
+    //用户昵称i
     private String username;
 
     //密码

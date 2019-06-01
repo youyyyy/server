@@ -8,6 +8,10 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+
+/*
+* 用户数据持久层，存放sql语句，提供操作数据库的接口
+* */
 @Mapper
 public interface UserDao {
 
